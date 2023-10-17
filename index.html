@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voting System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>System do głosowania</h1>
+    <h2>Zagłosuj</h2>
+    <form class="voting-form">
+      <label
+        >Nazwa użytkownika:<input type="text" class="user-name" required
+      /></label>
+      <label
+        >Identyfikator (8cyfr):<input
+          type="text"
+          class="user-id"
+          required
+          maxlength="8"
+          minlength="8"
+      /></label>
+      <select class="vote-options">
+        <option value="Opcja 1">Zdecydowanie TAK!</option>
+        <option value="Opcja 2">Zdecydowanie NIE!</option>
+        <option value="Opcja 3">Precz z komuną!</option>
+      </select>
+      <button type="submit" class="btn-sumbit">Zagłosuj</button>
+    </form>
+    <h2>Wyniki głosowania</h2>
+    <div class="vote-results"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
