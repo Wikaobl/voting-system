@@ -20,7 +20,27 @@ const votedUsers = new Set();
 
 const voting = (e) => {
   e.preventDefault();
-  //Logikę
+
+  const user = userName.value;
+  const password = userID.value;
+  const answer = voteOptions.value;
+
+  if (validUserIds.has(user)) {
+    if (validUserIds.get(user) !== password) {
+      alert("Nieprawidłowe hasło.");
+    }
+
+    if (votedUsers.has(user)) {
+      alert("Już zagłosowałeś. Dziękujemy.");
+    } else {
+      votedUsers.add(user);
+      console.log(votedUsers);
+
+      voteCounts.set(answer, voteCounts.get(answer) + 1);
+    }
+  } else {
+    alert("Nieprawidłowe dane.");
+  }
 
   updateResults();
 };
@@ -28,7 +48,7 @@ const voting = (e) => {
 const updateResults = () => {
   let output = "";
   for (const [option, count] of voteCounts) {
-    output += `${option} : ${count} głosów.`;
+    output += `${option} : ${count} głosów. <br>`;
   }
   resultDiv.innerHTML = output;
 };
