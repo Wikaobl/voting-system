@@ -12,3 +12,28 @@ To prevent multiple votes from the same user, the website alerts them with a mes
 
 When an identifier is not correct, _hints_ appear (e.g., it is invalid or too short).
 <img src="https://github.com/Wikaobl/voting-system/assets/107032701/f0588025-4427-4881-b5f3-a2698bb2fe09" alt="screenshot" width="50%">
+
+## Usage
+
+First, run the development server:
+
+```bash
+git clone https://github.com/Wikaobl/voting-system
+```
+
+Next, install dependencies
+
+```bash
+cd voting-system
+npm install
+```
+
+Run the project
+
+```bash
+npm run
+```
+
+After successfully starting the project, open your web browser and go to the specified URL http://localhost:3000
+
+### Have fun with your voting system! 🐸
